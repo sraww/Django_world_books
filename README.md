@@ -109,3 +109,7 @@ class AuthorListView(generic.ListView):
         model = Author
         paginate_by = 20
  ```
+ Файл views.py выглядит следующим образом:
+  ```
+  
+   ```
