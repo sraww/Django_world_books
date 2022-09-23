@@ -371,7 +371,9 @@ class BookInstanceAdmin(admin.ModelAdmin):
         }
          ),
     )
-    ```
+   
+    Остальные  файлы с расширением .html вы можете найти в архиве в папке catalog.
+    
   
   
   
