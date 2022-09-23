@@ -1,2 +1,2 @@
 # Django_world_books
-My  site on Django
+Этот сайт сделан на Pyton с помощью прикладных средств администрироввания Django.
