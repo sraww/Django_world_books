@@ -4,6 +4,7 @@
 ![image](https://user-images.githubusercontent.com/95234863/191929614-513dec4f-28b3-4085-a75e-81991ca7533a.png)
 Разработка сайта проходила в программе PyCharm Community Edition 2022.2
  Файл views.py выглядит следующим образом:
+ ```
  from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Book, Author, BookInstance, Genre
@@ -107,5 +108,4 @@ class BookDetailView(generic.DetailView):
 class AuthorListView(generic.ListView):
         model = Author
         paginate_by = 20
-
-
+ ```
