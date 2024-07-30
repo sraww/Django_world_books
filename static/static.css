@@ -1,0 +1,78 @@
+  .button {
+   height: 80px; /* Высота блока */
+   width: 80px; /* Ширина блока */
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #99CCFF;
+  border: none;
+  border-radius: 10px;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #99CCFF;
+  box-shadow: 0 10px #666;
+  transform: translateY(5px);
+}
+  .layer {
+    height: 100px; /* Высота блока */
+    width: 300px; /* Ширина блока */
+
+
+   }
+   . rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
+   }
+    div {
+
+
+    }
+
+     body { margin: 0; }
+   #sidebar, #content { position: absolute; }
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   #header {
+    height: 100px; /* Высота слоя */
+    background: #FEDFC0;
+
+
+   }
+   #header h1 { padding: 20px; margin: 0; }
+   #sidebar {
+    width: 80px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 250px; /* Расстояние от верхнего края */
+    bottom: 0; /* Расстояние снизу  */
+
+   }
+   .Head
+   {
+
+   }
+   #content {
+
+    top: 200px; /* Расстояние от верхнего края */
+    left: 400px; /* Расстояние от левого края */
+    right: 200px;
+
+    margin-bottom: 50px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+   }
+   #Merquee
+   {
+    top: 150px; /* Расстояние от верхнего края */
+    left: 285px; /* Расстояние от левого края */
+    right: 10px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+
+    }
+
