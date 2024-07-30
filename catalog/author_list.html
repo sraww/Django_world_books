@@ -1,0 +1,89 @@
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+<style>
+ .button {
+   height: 80px; /* Высота блока */
+   width: 80px; /* Ширина блока */
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #99CCFF;
+  border: none;
+  border-radius: 10px;
+
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #99CCFF;
+  box-shadow: 0 10px #666;
+  transform: translateY(15px);
+}
+    .layer {
+    height: 50px; /* Высота блока */
+    width: 300px; /* Ширина блока */
+
+
+   }
+   . rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
+   }
+    div {
+
+
+
+    }
+     body { margin: 0; }
+   #sidebar, #content { position: absolute; }
+   #sidebar, #content { overflow: auto; padding: 8px; }
+   #header {
+    height: 100px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+
+   }
+   #header h1 { padding: 20px; margin: 0; }
+   #sidebar {
+    width: 40px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 250px; /* Расстояние от верхнего края */
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+
+    top: 200px; /* Расстояние от верхнего края */
+    left: 400px; /* Расстояние от левого края */
+
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+   }
+   #Merquee
+   {
+    top: 305px; /* Расстояние от верхнего края */
+    left: 400px; /* Расстояние от левого края */
+   }
+</style>
+
+ <div id="content">
+    <center><h1>Список авторов</h1></p>
+
+   {% if author_list %}
+       {% for author in author_list.all %}
+        <p>{{ author.first_name}}  {{author.last_name}},
+           <br><strong>Дата рождения </strong>{{author.date_of_birth}}
+           <strong>Дата смерти</strong> {{author.date_of_death}}</p></br>
+      {% endfor %}
+   {% else %}
+      <p>В базе данных нет авторов</p>
+    {% endif %}
+        <hr>
+{% endblock %}
+        </hr>
+    </center>
+ </div>

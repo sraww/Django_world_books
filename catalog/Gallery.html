@@ -1,0 +1,153 @@
+{% extends "base_generic.html" %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+{% block gallery %}
+<head>
+
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'css/static.css' %}">
+    <meta charset="UTF-8">
+{% block content %}<body>
+
+</body>
+<table>
+    <tr>
+        <td><div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_1.JPG' %}"/></div></td>
+    </tr>
+    <tr>
+        <td><div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_2.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td> <div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_3.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td><div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_4.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td> <div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_5.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td><div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_6.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td><div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_8.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td> <div class="img-line"><div class="img-scale"><div class="img-scale:hover"><div class="pull-center"><img src="{% static 'g_9.JPG' %}"/></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+</div>
+    <title>HI!</title>
+    <style type="text/css">
+  .button {
+   height: 80px; /* Высота блока */
+   width: 80px; /* Ширина блока */
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #99CCFF;
+  border: none;
+  border-radius: 10px;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #99CCFF;
+  box-shadow: 0 10px #666;
+  transform: translateY(5px);
+}
+  .layer {
+    height: 100px; /* Высота блока */
+    width: 300px; /* Ширина блока */
+
+
+   }
+   . rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
+   }
+    div {
+
+
+    }
+
+     body { margin: 0; }
+   #sidebar, #content { position: absolute; }
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   #header {
+    height: 100px; /* Высота слоя */
+    background: #FEDFC0;
+
+
+   }
+   #header h1 { padding: 20px; margin: 0; }
+   #sidebar {
+    width: 80px; background: #ECF5E4; border-right: 1px solid #231F20;
+    right: 450px;
+    top: 250px; /* Расстояние от верхнего края */
+    bottom: 0; /* Расстояние снизу  */
+
+   }
+   .Head
+   {
+
+   }
+   #content {
+
+    top: 120px; /* Расстояние от верхнего края */
+    left: 200px; /* Расстояние от левого края */
+    right: 200px;
+
+    margin-bottom: 50px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+   }
+   #Merquee
+   {
+    top: 150px; /* Расстояние от верхнего края */
+    left: 285px; /* Расстояние от левого края */
+    right: 10px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+
+    }
+   .img-line {
+        top: 150px;
+        left: 150px;
+        height: auto;
+		border: 0px solid #99CCFF; /* Рамка вокруг фотографии */
+		padding: 15px; /* Расстояние от картинки до рамки */
+		background: #99CCFF; /* Цвет фона */
+		margin-left: 200px;
+		margin-right: 10px; /* Отступ справа */
+		margin-bottom: 10px; /* Отступ снизу */
+		}
+		.img-scale {
+		transition: 1s; /* Время эффекта */
+    }
+	.img-scale:hover {
+		transform: scale(1.2); /* Увеличиваем масштаб */
+    }
+.pull-center {
+		text-align:center;
+	}
+	 .sidebar-nav
+ {
+
+ }
+   </style>
+
+</head>
+
+</html>
+ {% endblock content %}
+ {% endblock gallery %}

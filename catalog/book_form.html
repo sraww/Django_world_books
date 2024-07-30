@@ -1,0 +1,15 @@
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <div id="content">
+<center><form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Сохранить" />
+
+</form>
+{% endblock %}</center>
+ </div>

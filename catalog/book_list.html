@@ -1,0 +1,68 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+</body>
+
+  <div id="content">
+   <center> <h1>Список книг </h1>
+
+        {% if book_list %}
+
+        <script type="text/javascript" language="JavaScript">
+    var copy_page;
+
+    function FindOnPage(inputId) {
+        var obj = document.getElementById(inputId),
+        objValue = obj.value.replace(/^[\s\A-z\\\-=_''""\.]+|[\s\A-z\\\-=_''""\.]+$/gi, '').replace(/^[\s\A-z\\\-=_''""\.]+|[\s\A-z\\\-=_''""\.]+$/gi, '');
+
+        if (objValue == '') { alert('Вы ничего не ввели'); return }
+
+        if (document.location.href.indexOf('#') < 0) copy_page = document.body.innerHTML;
+        else document.body.innerHTML = copy_page;
+
+        var ttf = new RegExp(objValue.split('').join('-?'), 'g'),
+        db = document.body.innerHTML,
+        rz = db.match(ttf);
+        if (rz == null) { alert('Ничего не найдено, проверьте правильность ввода!'); return }
+
+        obj.value = '';
+        document.location.href = document.location.href.split('#')[0] + '#' + objValue;
+
+        var rz1 = new Array(); rz1[0] = rz[0];
+        var rz_obr = new Array(); rz_obr[rz1[0]] = 1;
+        if (rz.length > 1)
+            for (var k = j = 1, lj = rz.length; j < lj; j++)
+                if (!rz_obr[rz[j]]) { rz1[k++] = rz[j]; rz_obr[rz[j]] = 1 }
+
+        for (j = 0, lj = rz1.length; j < lj; j++) {
+            var z = (!j) ? (' id="' + objValue + '"') : '';
+            document.body.innerHTML = document.body.innerHTML.replace(new RegExp(rz1[j], 'g'), '<span style="background: red"' + z + '>' + rz1[j] + '</span>');
+        }
+        document.location.href = document.location.href.split('#')[0] + '#' + objValue;
+    }
+</script>
+        <form class="form-search"  method="get" action="/search" target="_blank">
+        <input type="button" onclick="FindOnPage('textToFind')" value="Найти"/>
+        <input type="text" name="q" id="textToFind" placeholder="поиск" value=""/></form>
+        {% for book in book_list %}
+
+
+        <p align="left"><a href="{{ book.get_absolute_url }}">
+                 {{ book.title }}</a>
+                 ({{book.genre}})
+              <a href="/book/update/{{book.id}}">Изменить</a>
+            <a href="/book/delete/{{book.id}}">Удалить</a></p>
+
+      {% endfor %}
+
+    {% else %}
+      <p>В базе данных нет книг</p>
+    {% endif %}
+{% endblock content%}</center>
+  </div>
+</html>

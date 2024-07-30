@@ -1,0 +1,62 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<style>
+ body { margin: 0; }
+   #sidebar, #content { position: absolute; }
+   #sidebar, #content { overflow: auto; padding: 8px; }
+   #header {
+    height: 100px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+
+   }
+   #header h1 { padding: 20px; margin: 0; }
+   #sidebar {
+    width: 40px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 250px; /* Расстояние от верхнего края */
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+
+    top: 200px; /* Расстояние от верхнего края */
+    left: 400px; /* Расстояние от левого края */
+
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+   }
+   #Merquee
+   {
+    top: 305px; /* Расстояние от верхнего края */
+    left: 400px; /* Расстояние от левого края */
+   }
+</style>
+<div id="content">
+<center><strong>Название книги: </strong>{{ book.title }}
+
+  <p><strong>Жанр:</strong> {{ book.genre }}</p>
+  <p><strong>Аннотация:</strong> {{ book.summary }}</p>
+  <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+  <p><strong>Язык:</strong> {{ book.language }}</p>
+     {% for author in book.author.all %}
+        <p><strong>Автор:</strong>
+           <a href="">{{ author.first_name }}
+                      {{author.last_name}}</a></p>
+     {% endfor %}
+
+<div style="margin-left:20px;margin-top:100px;">
+   <h4>Информация о книге</h4>
+    {% for copy in book.bookinstance_set.all %}
+       <hr><p class="{% if copy.status == 1 %} text-success
+                 {% elif copy.status == 2 %} text-danger
+                 {% else %} text-warning
+                 {% endif %}"> {{ copy.get_status_display }}</p>
+       <p><strong>Издательство:</strong> {{copy.imprint}}</p>
+       <p class="text-muted"><strong>Инвентарный номер:</strong> {{copy.id}}</p>
+       <p><strong>Статус экземпляра книги в БД:</strong> {{copy.status}}</p>
+    {% endfor %}
+  </div>
+{% endblock content %}
+<p><strong>Автор:</strong> <a href="">{{ author.first_name }}  {{author.last_name}}</a></p>
+</center>
+</div>
