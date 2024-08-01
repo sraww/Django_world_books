@@ -36,7 +36,6 @@ urlpatterns = [
     url(r'^authors/$', views.AuthorListView.as_view(), name='authors'),
     url(r'^mybooks/$', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
 
-
 ]
 from django.urls import path, include
 
