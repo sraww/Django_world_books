@@ -48,4 +48,3 @@ urlpatterns += [
     url(r'^book/update/(?P<pk>\d+)$', views.BookUpdate.as_view(), name='book_update'),
     url(r'^book/delete/(?P<pk>\d+)$', views.BookDelete.as_view(), name='book_delete'),
 ]
-
