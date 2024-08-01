@@ -49,6 +49,3 @@ urlpatterns += [
     url(r'^book/delete/(?P<pk>\d+)$', views.BookDelete.as_view(), name='book_delete'),
 ]
 
-
-
-
