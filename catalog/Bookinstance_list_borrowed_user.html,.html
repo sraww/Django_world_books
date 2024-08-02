@@ -3,10 +3,8 @@
 
 {% block content %}
     <center><h1>Взятые книги</h1>
-
     {% if bookinstance_list %}
     <ul>
-
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}
                                    text-danger{% endif %}">
@@ -16,7 +14,6 @@
       </li>
       {% endfor %}
     </ul>
-
     {% else %}
       <p>Нет книг со статусом В ЗАКАЗЕ.</p>
     {% endif %}
