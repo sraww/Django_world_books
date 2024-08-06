@@ -13,7 +13,6 @@
 }
 
 .button:hover {background-color: #3e8e41}
-
 .button:active {
   background-color: #99CCFF;
   box-shadow: 0 10px #666;
@@ -48,7 +47,6 @@
    }
    .Head
    {
-
    }
    #content {
 
