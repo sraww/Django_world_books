@@ -1,4 +1,4 @@
-  .button {
+    .button {
    height: 80px; /* Высота блока */
    width: 80px; /* Ширина блока */
   font-size: 10px;
@@ -22,8 +22,6 @@
   .layer {
     height: 100px; /* Высота блока */
     width: 300px; /* Ширина блока */
-
-
    }
    . rightpic {
     float: right; /* Выравнивание по правому краю */
