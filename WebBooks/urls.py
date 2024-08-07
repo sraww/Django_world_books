@@ -20,7 +20,6 @@ from catalog import views
 from django.http import HttpResponse
 from django.urls import path, include
 from django.urls import re_path as url
-
 urlpatterns = [
     path('edit1/<int:id>/', views.edit1, name='edit1'),
     path('create/', views.create, name='create'),
@@ -34,7 +33,6 @@ urlpatterns = [
     url(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
     url(r'^authors/$', views.AuthorListView.as_view(), name='authors'),
     url(r'^mybooks/$', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
-
 ]
 from django.urls import path, include
 
