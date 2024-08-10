@@ -121,5 +121,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Переадресация на главную страницу сайта после входа в систему
 LOGIN_REDIRECT_URL = '/'
-
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
