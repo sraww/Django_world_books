@@ -16,11 +16,9 @@
         var obj = document.getElementById(inputId),
         objValue = obj.value.replace(/^[\s\A-z\\\-=_''""\.]+|[\s\A-z\\\-=_''""\.]+$/gi, '').replace(/^[\s\A-z\\\-=_''""\.]+|[\s\A-z\\\-=_''""\.]+$/gi, '');
         if (objValue == '') { alert('Вы ничего не ввели'); return }
-
         if (document.location.href.indexOf('#') < 0) copy_page = document.body.innerHTML;
         else document.body.innerHTML = copy_page;
-
-        var ttf = new RegExp(objValue.split('').join('-?'), 'g'),
+       var ttf = new RegExp(objValue.split('').join('-?'), 'g'),
         db = document.body.innerHTML,
         rz = db.match(ttf);
         if (rz == null) { alert('Ничего не найдено, проверьте правильность ввода!'); return }
