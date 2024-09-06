@@ -49,10 +49,10 @@
                  {{ book.title }}</a>
                  ({{book.genre}})
               <a href="/book/update/{{book.id}}">Изменить</a>
-            <a href="/book/delete/{{book.id}}">Удалить</a></p>
+           <a href="/book/delete/{{book.id}}">Удалить</a></p>
 
       {% endfor %}
-
+      
     {% else %}
       <p>В базе данных нет книг</p>
     {% endif %}
