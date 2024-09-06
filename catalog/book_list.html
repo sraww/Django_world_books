@@ -44,7 +44,6 @@
         <input type="text" name="q" id="textToFind" placeholder="поиск" value=""/></form>
         {% for book in book_list %}
 
-
         <p align="left"><a href="{{ book.get_absolute_url }}">
                  {{ book.title }}</a>
                  ({{book.genre}})
