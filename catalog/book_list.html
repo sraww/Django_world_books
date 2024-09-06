@@ -15,7 +15,6 @@
     function FindOnPage(inputId) {
         var obj = document.getElementById(inputId),
         objValue = obj.value.replace(/^[\s\A-z\\\-=_''""\.]+|[\s\A-z\\\-=_''""\.]+$/gi, '').replace(/^[\s\A-z\\\-=_''""\.]+|[\s\A-z\\\-=_''""\.]+$/gi, '');
-
         if (objValue == '') { alert('Вы ничего не ввели'); return }
 
         if (document.location.href.indexOf('#') < 0) copy_page = document.body.innerHTML;
