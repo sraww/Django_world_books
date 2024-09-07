@@ -42,7 +42,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'WebBooks.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -58,7 +57,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'WebBooks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
