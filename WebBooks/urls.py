@@ -28,7 +28,7 @@ urlpatterns = [
     path('authors_add/', views.authors_add, name='authors_add'),
     path('admin/', admin.site.urls),
     path('Gallery', views.gallery, name='Gallery'),
-    url(r'^Gallery/', views.gallery, name='gallery'),
+    url(r'^Gallery/', views.gallery, name='Gallery'),
     url(r'^books/$', views.BookListView.as_view(), name='books'),
     url(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
     url(r'^authors/$', views.AuthorListView.as_view(), name='authors'),
